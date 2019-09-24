@@ -1,4 +1,661 @@
-<hello name="{{ name }}"></hello>
-<p>
-  Start editing to see some magic happen :)
-</p>
+
+      <table>
+        <tr>
+          <td></td>
+          <th>Price</th>
+          <th>Design</th>
+          <th>Camera Q</th>
+          <th>Screen  Q</th>
+          <th>Memory size</th>
+          <th>GPU</th>
+          <th>Battery</th>
+          <th>MyVector</th>
+          <th>PriorityVector</th>
+          <th>Lyambda</th>
+        </tr>
+        <tr>
+          <th>Price</th>
+          <td class = 'default'>1</td>
+          <td> <input type="number" [(ngModel)] = 'priceSize'></td>
+          <td> <input type="number" [(ngModel)] = 'priceCase'></td>
+          <td> <input type="number" [(ngModel)] = 'priceCPU'></td>
+          <td> <input type="number" [(ngModel)] = 'priceSSD'></td>
+          <td> <input type="number" [(ngModel)] = 'priceGPU'></td>
+          <td> <input type="number" [(ngModel)] = 'priceBattery'></td>
+          <td class = 'results'>{{myPriceVector}}</td>
+          <td class = 'results'>{{PriorityVectorPrice}}</td>
+          <td class = 'results'>{{priceLyambda}}</td>
+        </tr>
+        <tr>
+            <th>Design</th>
+            <td> <input type="number" [(ngModel)] = 'sizePrice'></td>
+            <td class = 'default'>1</td>
+            <td> <input type="number" [(ngModel)] = 'sizeCase'></td>
+            <td> <input type="number" [(ngModel)] = 'sizeCPU'></td>
+            <td> <input type="number" [(ngModel)] = 'sizeSSD'></td>
+            <td> <input type="number" [(ngModel)] = 'sizeGPU'></td>
+            <td> <input type="number" [(ngModel)] = 'sizeBattery'></td>
+            <td class = 'results'>{{mySizeVector}}</td>
+            <td class = 'results'>{{PriprityVectorSize}}</td>
+            <td class = 'results'>{{sizeLyambda}}</td>
+          </tr>
+          <tr>
+              <th>Camera Q</th>
+              <td> <input type="number" [(ngModel)] = 'casePrice'></td>
+              <td> <input type="number" [(ngModel)] = 'caseSize'></td>
+              <td class = 'default'>1</td>
+              <td> <input type="number" [(ngModel)] = 'caseCPU'></td>
+              <td> <input type="number" [(ngModel)] = 'caseSSD'></td>
+              <td> <input type="number" [(ngModel)] = 'caseGPU'></td>
+              <td> <input type="number" [(ngModel)] = 'caseBattery'></td>
+              <td class = 'results'>{{myCaseVector}}</td>
+              <td class = 'results'>{{PriprityVectorCase}}</td>
+              <td class = 'results'>{{caseLyambda}}</td>
+            </tr>
+            <tr>
+                <th>Screen  Q</th>
+                <td> <input type="number" [(ngModel)] = 'cpuPrice'></td>
+                <td> <input type="number" [(ngModel)] = 'cpuSize'></td>
+                <td> <input type="number" [(ngModel)] = 'cpuCase'></td>
+                <td class = 'default'>1</td>
+                <td> <input type="number" [(ngModel)] = 'cpuSSD'></td>
+                <td> <input type="number" [(ngModel)] = 'cpuGPU'></td>
+                <td> <input type="number" [(ngModel)] = 'cpuBattery'></td>
+                <td class = 'results'>{{myCPUVector}}</td>
+                <td class = 'results'>{{PriprityVectorCPU}}</td>
+                <td class = 'results'>{{cpuLyambda}}</td>
+              </tr>
+              <tr>
+                  <th>Memory size</th>
+                  <td> <input type="number" [(ngModel)] = 'ssdPrice'></td>
+                  <td> <input type="number" [(ngModel)] = 'ssdSize'></td>
+                  <td> <input type="number" [(ngModel)] = 'ssdCase'></td>
+                  <td> <input type="number" [(ngModel)] = 'ssdCPU'></td>
+                  <td class = 'default'>1</td>
+                  <td> <input type="number" [(ngModel)] = 'ssdGPU'></td>
+                  <td> <input type="number" [(ngModel)] = 'ssdBattery'></td>
+                  <td class = 'results'>{{mySSDVector}}</td>
+                  <td class = 'results'>{{PriprityVectorSSD}}</td>
+                  <td class = 'results'>{{ssdLyambda}}</td>
+                </tr>
+                <tr>
+                    <th>GPU</th>
+                    <td> <input type="number" [(ngModel)] = 'gpuPrice'></td>
+                    <td> <input type="number" [(ngModel)] = 'gpuSize'></td>
+                    <td> <input type="number" [(ngModel)] = 'gpuCase'></td>
+                    <td> <input type="number" [(ngModel)] = 'gpuCPU'></td>
+                    <td> <input type="number" [(ngModel)] = 'gpuSSD'></td>
+                    <td class = 'default'>1</td>
+                    <td> <input type="number" [(ngModel)] = 'gpuBattery'></td>
+                    <td class = 'results'>{{myGPUVector}}</td>
+                    <td class = 'results'>{{PriprityVectorGPU}}</td>
+                    <td class = 'results'>{{gpuLyambda}}</td>
+                  </tr>
+                    <tr>
+                      <tr>
+                    <th>Battery</th>
+                    <td> <input type="number" [(ngModel)] = 'batteryPrice'></td>
+                    <td> <input type="number" [(ngModel)] = 'batterySize'></td>
+                    <td> <input type="number" [(ngModel)] = 'batteryCase'></td>
+                    <td> <input type="number" [(ngModel)] = 'batteryCPU'></td>
+                    <td> <input type="number" [(ngModel)] = 'batterySSD'></td>
+                    <td> <input type="number" [(ngModel)] = 'batteryGPU'></td>
+                    <td class = 'default'>1</td>
+                    <td class = 'results'>{{myBatteryVector}}</td>
+                    <td class = 'results'>{{PriprityVectorBattery}}</td>
+                    <td class = 'results'>{{batteryLyambda}}</td>
+                  </tr>
+                  <tr>
+                        <th>Sum</th>
+                        <td class = 'results'>{{priceSum}}</td>
+                        <td class = 'results'>{{sizeSum}}</td>
+                        <td class = 'results'>{{caseSum}}</td>
+                        <td class = 'results'>{{cpuSum}}</td>
+                        <td class = 'results'>{{ssdSum}}</td>
+                        <td class = 'results'>{{gpuSum}}</td>
+                        <td class = 'results'>{{batterySum}}</td>
+                        <td class = 'results'>{{MyVectorSum}}</td>
+                        <td class = 'results'>{{PriorityVectorSumm}}</td>
+                        <td class = 'results'>{{LyambdaSum}}</td>
+                      </tr>
+                      Main Table
+                      <button class = 'btn calculate' (click)='Calculate()'>Calculate</button>
+                      Categories Tables
+                      <button class = 'btn calculate' (click)='CalculateCriteries()'>Calculate</button>
+                      <h5>ІУ - {{((LyambdaSum-7)/6) * 100}}%</h5>
+                      <h5>ВУ - {{(((LyambdaSum-7)/6) / 1.32)*100}}%</h5>
+      </table>
+
+      <div class="wrapper">
+        <h1>Price</h1>
+        <table id='price'>
+          <tr>
+            <th class = 'white-bg'></th>
+            <th>Apple Iphone Xs</th>
+            <th>Asus ZenPhone 3</th>
+            <th>OnePlus 6</th>
+            <th>Xiaomi MI9T</th>
+            <th>MyVector</th>
+            <th>PriorityVector</th>
+            <th>Lyambda</th>
+          </tr>
+          <tr>
+            <td  style = 'color:black; background-color: darkcyan' >Apple Iphone Xs</td>
+            <td class = 'results'>1</td>
+            <td><input type="number" [(ngModel)] = 'LenovoItoAcerA_Pricer'></td>
+            <td><input type="number" [(ngModel)] = 'LenovoItoLenovoG_Pricer'></td>
+            <td><input type="number" [(ngModel)] = 'LenovoItoAcerS_Pricer'></td>
+            <td class = 'results'>{{MyPriceCriteriesVectorLenovoI}}</td>
+            <td class = 'results'>{{PricePriorityCriteriesVectorLenovoI}}</td>
+            <td class = 'results'>{{PricePriorityCriteriesLyambdaLenovoI}}</td>
+          </tr>
+          <tr>
+            <td  style = 'color:black; background-color: darkcyan'>Asus ZenPhone 3</td>
+            <td><input type="number" [(ngModel)] = 'AcerAtoLenovoI_Pricer'></td>
+            <td class = 'results'>1</td>
+            <td><input type="number" [(ngModel)] = 'AcerAtoLenovoG_Pricer'></td>
+            <td><input type="number" [(ngModel)] = 'AcerAtoAcerS_Pricer'></td>
+            <td class = 'results'>{{MyPriceCriteriesVectorAcerA}}</td>
+            <td class = 'results'>{{PricePrioritCriteriesVectorAcerA}}</td>
+            <td class = 'results'>{{PricePrioritCriteriesLyambdAcerA}}</td>
+          </tr>
+          <tr>
+            <td style = 'color:black; background-color: darkcyan'>OnePlus 6</td>
+            <td><input type="number" [(ngModel)] = 'LenovoGtoLenovoI_Pricer'></td>
+            <td><input type="number" [(ngModel)] = 'LenovoGtoAcerA_Pricer'></td>
+            <td class = 'results'>1</td>
+            <td><input type="number" [(ngModel)] = 'LenovoGtoAcerS_Pricer'></td>
+            <td class = 'results'>{{MyPriceCriteriesVectorLenovoG}}</td>
+            <td class = 'results'>{{PricePrioritCriteriesVectorLenovoG}}</td>
+            <td class = 'results'>{{PricePrioritCriteriesLyambdLenovoG}}</td>
+          </tr>
+          <tr>
+            <td style = 'color:black; background-color: darkcyan'>Xiaomi MI9T</td>
+            <td><input type="number" [(ngModel)] = 'AcerStoLenovoI_Pricer'></td>
+            <td><input type="number" [(ngModel)] = 'AcerStoAcerA_Pricer'></td>
+            <td><input type="number" [(ngModel)] = 'AcerStoLenovoG_Pricer'></td>
+            <td class = 'results'>1</td>
+            <td class = 'results'>{{MyPriceCriteriesVectorAcerS}}</td>
+            <td class = 'results'>{{PricePrioritCriteriesVectorAcerS}}</td>
+            <td class = 'results'>{{PricePrioritCriteriesLyambdAcerS}}</td>
+          </tr>
+          <tr>
+            <td style = 'color:black; background-color: darkcyan'>Sum</td>
+            <td class = 'results'>{{LenovoICriteriesPriceSum}}</td>
+            <td class = 'results'>{{AcerACriteriesPriceSum}}</td>
+            <td class = 'results'>{{LenovoGCriteriesPriceSum}}</td>
+            <td class = 'results'>{{AcerSCriteriesPriceSum}}</td>
+            <td class = 'results'>{{MyPriceVectorCriteriesSum}}</td>
+            <td class = 'results'>{{PricePrioritVectorCriteriesSum+0.0000000000000001}}</td>
+            <td class = 'results'>{{PricePrioritLyambdCriteriesSum}}</td>
+          </tr>
+        </table>
+
+        <h5>ІУ - {{((PricePrioritLyambdCriteriesSum-4)/3) * 100}}%</h5>
+                      <h5>ВУ - {{(((PricePrioritLyambdCriteriesSum-4)/3) / 0.9)*100}}%</h5>
+
+<!--//////////////////////////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////-->
+
+<h1>Design</h1>
+<table id='size'>
+  <tr>
+    <th class = 'white-bg'></th>
+    <th>Apple Iphone Xs</th>
+    <th>Asus ZenPhone 3</th>
+    <th>OnePlus 6</th>
+    <th>Xiaomi MI9T</th>
+    <th>MyVector</th>
+    <th>PriorityVector</th>
+    <th>Lyambda</th>
+  </tr>
+  <tr>
+    <td  style = 'color:black; background-color: darkcyan' >Apple Iphone Xs</td>
+    <td class = 'results'>1</td>
+    <td><input type="number" [(ngModel)] = 'LenovoItoAcerA_Size'></td>
+    <td><input type="number" [(ngModel)] = 'LenovoItoLenovoG_Size'></td>
+    <td><input type="number" [(ngModel)] = 'LenovoItoAcerS_Size'></td>
+    <td class = 'results'>{{MySizeCriteriesVectorLenovoI}}</td>
+    <td class = 'results'>{{SizePriorityCriteriesVectorLenovoI}}</td>
+    <td class = 'results'>{{SizePriorityCriteriesLyambdaLenovoI}}</td>
+  </tr>
+  <tr>
+    <td  style = 'color:black; background-color: darkcyan'>Asus ZenPhone 3</td>
+    <td><input type="number" [(ngModel)] = 'AcerAtoLenovoI_Size'></td>
+    <td class = 'results'>1</td>
+    <td><input type="number" [(ngModel)] = 'AcerAtoLenovoG_Size'></td>
+    <td><input type="number" [(ngModel)] = 'AcerAtoAcerS_Size'></td>
+    <td class = 'results'>{{MySizeCriteriesVectorAcerA}}</td>
+    <td class = 'results'>{{SizePrioritCriteriesVectorAcerA}}</td>
+    <td class = 'results'>{{SizePrioritCriteriesLyambdAcerA}}</td>
+  </tr>
+  <tr>
+    <td style = 'color:black; background-color: darkcyan'>OnePlus 6</td>
+    <td><input type="number" [(ngModel)] = 'LenovoGtoLenovoI_Size'></td>
+    <td><input type="number" [(ngModel)] = 'LenovoGtoAcerA_Size'></td>
+    <td class = 'results'>1</td>
+    <td><input type="number" [(ngModel)] = 'LenovoGtoAcerS_Size'></td>
+    <td class = 'results'>{{MySizeCriteriesVectorLenovoG}}</td>
+    <td class = 'results'>{{SizePrioritCriteriesVectorLenovoG}}</td>
+    <td class = 'results'>{{SizePrioritCriteriesLyambdLenovoG}}</td>
+  </tr>
+  <tr>
+    <td style = 'color:black; background-color: darkcyan'>Xiaomi MI9T</td>
+    <td><input type="number" [(ngModel)] = 'AcerStoLenovoI_Size'></td>
+    <td><input type="number" [(ngModel)] = 'AcerStoAcerA_Size'></td>
+    <td><input type="number" [(ngModel)] = 'AcerStoLenovoG_Size'></td>
+    <td class = 'results'>1</td>
+    <td class = 'results'>{{MySizeCriteriesVectorAcerS}}</td>
+    <td class = 'results'>{{SizePrioritCriteriesVectorAcerS}}</td>
+    <td class = 'results'>{{SizePrioritCriteriesLyambdAcerS}}</td>
+  </tr>
+  <tr>
+    <td style = 'color:black; background-color: darkcyan'>Sum</td>
+    <td class = 'results'>{{LenovoICriteriesSizeSum}}</td>
+    <td class = 'results'>{{AcerACriteriesSizeSum}}</td>
+    <td class = 'results'>{{LenovoGCriteriesSizeSum}}</td>
+    <td class = 'results'>{{AcerSCriteriesSizeSum}}</td>
+    <td class = 'results'>{{MySizeVectorCriteriesSum}}</td>
+    <td class = 'results'>{{SizePrioritVectorCriteriesSum+0.0000000000000001}}</td>
+    <td class = 'results'>{{SizePrioritLyambdCriteriesSum}}</td>
+  </tr>
+</table>
+
+<h5>ІУ - {{((SizePrioritLyambdCriteriesSum-4)/3) * 10}}%</h5>
+              <h5>ВУ - {{(((SizePrioritLyambdCriteriesSum-4)/3) / 0.9)*10}}%</h5>
+
+
+<!--//////////////////////////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////-->
+
+<h1>Camera Q</h1>
+<table id='case'>
+  <tr>
+    <th class = 'white-bg'></th>
+    <th>Apple Iphone Xs</th>
+    <th>Asus ZenPhone 3</th>
+    <th>OnePlus 6</th>
+    <th>Xiaomi MI9T</th>
+    <th>MyVector</th>
+    <th>PriorityVector</th>
+    <th>Lyambda</th>
+  </tr>
+  <tr>
+    <td  style = 'color:black; background-color: darkcyan' >Apple Iphone Xs</td>
+    <td class = 'results'>1</td>
+    <td><input type="number" [(ngModel)] = 'LenovoItoAcerA_Case'></td>
+    <td><input type="number" [(ngModel)] = 'LenovoItoLenovoG_Case'></td>
+    <td><input type="number" [(ngModel)] = 'LenovoItoAcerS_Case'></td>
+    <td class = 'results'>{{MyCaseCriteriesVectorLenovoI}}</td>
+    <td class = 'results'>{{CasePriorityCriteriesVectorLenovoI}}</td>
+    <td class = 'results'>{{CasePriorityCriteriesLyambdaLenovoI}}</td>
+  </tr>
+  <tr>
+    <td  style = 'color:black; background-color: darkcyan'>Asus ZenPhone 3</td>
+    <td><input type="number" [(ngModel)] = 'AcerAtoLenovoI_Case'></td>
+    <td class = 'results'>1</td>
+    <td><input type="number" [(ngModel)] = 'AcerAtoLenovoG_Case'></td>
+    <td><input type="number" [(ngModel)] = 'AcerAtoAcerS_Case'></td>
+    <td class = 'results'>{{MyCaseCriteriesVectorAcerA}}</td>
+    <td class = 'results'>{{CasePrioritCriteriesVectorAcerA}}</td>
+    <td class = 'results'>{{CasePrioritCriteriesLyambdAcerA}}</td>
+  </tr>
+  <tr>
+    <td style = 'color:black; background-color: darkcyan'>OnePlus 6</td>
+    <td><input type="number" [(ngModel)] = 'LenovoGtoLenovoI_Case'></td>
+    <td><input type="number" [(ngModel)] = 'LenovoGtoAcerA_Case'></td>
+    <td class = 'results'>1</td>
+    <td><input type="number" [(ngModel)] = 'LenovoGtoAcerS_Case'></td>
+    <td class = 'results'>{{MyCaseCriteriesVectorLenovoG}}</td>
+    <td class = 'results'>{{CasePrioritCriteriesVectorLenovoG}}</td>
+    <td class = 'results'>{{CasePrioritCriteriesLyambdLenovoG}}</td>
+  </tr>
+  <tr>
+    <td style = 'color:black; background-color: darkcyan'>Xiaomi MI9T</td>
+    <td><input type="number" [(ngModel)] = 'AcerStoLenovoI_Case'></td>
+    <td><input type="number" [(ngModel)] = 'AcerStoAcerA_Case'></td>
+    <td><input type="number" [(ngModel)] = 'AcerStoLenovoG_Case'></td>
+    <td class = 'results'>1</td>
+    <td class = 'results'>{{MyCaseCriteriesVectorAcerS}}</td>
+    <td class = 'results'>{{CasePrioritCriteriesVectorAcerS}}</td>
+    <td class = 'results'>{{CasePrioritCriteriesLyambdAcerS}}</td>
+  </tr>
+  <tr>
+    <td style = 'color:black; background-color: darkcyan'>Sum</td>
+    <td class = 'results'>{{LenovoICriteriesCaseSum}}</td>
+    <td class = 'results'>{{AcerACriteriesCaseSum}}</td>
+    <td class = 'results'>{{LenovoGCriteriesCaseSum}}</td>
+    <td class = 'results'>{{AcerSCriteriesCaseSum}}</td>
+    <td class = 'results'>{{MyCaseVectorCriteriesSum}}</td>
+    <td class = 'results'>{{CasePrioritVectorCriteriesSum+0.0000000000000001}}</td>
+    <td class = 'results'>{{CasePrioritLyambdCriteriesSum}}</td>
+  </tr>
+</table>
+
+<h5>ІУ - {{((CasePrioritLyambdCriteriesSum-4)/3) * 10}}%</h5>
+              <h5>ВУ - {{(((CasePrioritLyambdCriteriesSum-4)/3) / 0.9)*10}}%</h5>
+
+
+<!--//////////////////////////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////-->
+
+<h1>Screen Q</h1>
+<table id='cpu'>
+  <tr>
+    <th class = 'white-bg'></th>
+    <th>Apple Iphone Xs</th>
+    <th>Asus ZenPhone 3</th>
+    <th>OnePlus 6</th>
+    <th>Xiaomi MI9T</th>
+    <th>MyVector</th>
+    <th>PriorityVector</th>
+    <th>Lyambda</th>
+  </tr>
+  <tr>
+    <td  style = 'color:black; background-color: darkcyan' >Apple Iphone Xs</td>
+    <td class = 'results'>1</td>
+    <td><input type="number" [(ngModel)] = 'LenovoItoAcerA_CPU'></td>
+    <td><input type="number" [(ngModel)] = 'LenovoItoLenovoG_CPU'></td>
+    <td><input type="number" [(ngModel)] = 'LenovoItoAcerS_CPU'></td>
+    <td class = 'results'>{{MyCPUCriteriesVectorLenovoI}}</td>
+    <td class = 'results'>{{CPUPriorityCriteriesVectorLenovoI}}</td>
+    <td class = 'results'>{{CPUPriorityCriteriesLyambdaLenovoI}}</td>
+  </tr>
+  <tr>
+    <td  style = 'color:black; background-color: darkcyan'>Asus ZenPhone 3</td>
+    <td><input type="number" [(ngModel)] = 'AcerAtoLenovoI_CPU'></td>
+    <td class = 'results'>1</td>
+    <td><input type="number" [(ngModel)] = 'AcerAtoLenovoG_CPU'></td>
+    <td><input type="number" [(ngModel)] = 'AcerAtoAcerS_CPU'></td>
+    <td class = 'results'>{{MyCPUCriteriesVectorAcerA}}</td>
+    <td class = 'results'>{{CPUPrioritCriteriesVectorAcerA}}</td>
+    <td class = 'results'>{{CPUPrioritCriteriesLyambdAcerA}}</td>
+  </tr>
+  <tr>
+    <td style = 'color:black; background-color: darkcyan'>OnePlus 6</td>
+    <td><input type="number" [(ngModel)] = 'LenovoGtoLenovoI_CPU'></td>
+    <td><input type="number" [(ngModel)] = 'LenovoGtoAcerA_CPU'></td>
+    <td class = 'results'>1</td>
+    <td><input type="number" [(ngModel)] = 'LenovoGtoAcerS_CPU'></td>
+    <td class = 'results'>{{MyCPUCriteriesVectorLenovoG}}</td>
+    <td class = 'results'>{{CPUPrioritCriteriesVectorLenovoG}}</td>
+    <td class = 'results'>{{CPUPrioritCriteriesLyambdLenovoG}}</td>
+  </tr>
+  <tr>
+    <td style = 'color:black; background-color: darkcyan'>Xiaomi MI9T</td>
+    <td><input type="number" [(ngModel)] = 'AcerStoLenovoI_CPU'></td>
+    <td><input type="number" [(ngModel)] = 'AcerStoAcerA_CPU'></td>
+    <td><input type="number" [(ngModel)] = 'AcerStoLenovoG_CPU'></td>
+    <td class = 'results'>1</td>
+    <td class = 'results'>{{MyCPUCriteriesVectorAcerS}}</td>
+    <td class = 'results'>{{CPUPrioritCriteriesVectorAcerS}}</td>
+    <td class = 'results'>{{CPUPrioritCriteriesLyambdAcerS}}</td>
+  </tr>
+  <tr>
+    <td style = 'color:black; background-color: darkcyan'>Sum</td>
+    <td class = 'results'>{{LenovoICriteriesCPUSum}}</td>
+    <td class = 'results'>{{AcerACriteriesCPUSum}}</td>
+    <td class = 'results'>{{LenovoGCriteriesCPUSum}}</td>
+    <td class = 'results'>{{AcerSCriteriesCPUSum}}</td>
+    <td class = 'results'>{{MyCPUVectorCriteriesSum}}</td>
+    <td class = 'results'>{{CPUPrioritVectorCriteriesSum+0.0000000000000001}}</td>
+    <td class = 'results'>{{CPUPrioritLyambdCriteriesSum}}</td>
+  </tr>
+</table>
+<h5>ІУ - {{((CPUPrioritLyambdCriteriesSum-4)/3) * 10}}%</h5>
+              <h5>ВУ - {{(((CPUPrioritLyambdCriteriesSum-4)/3) / 0.9)*10}}%</h5>
+
+
+<!--//////////////////////////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////-->
+
+<h1>Memory Size</h1>
+<table id='ssd'>
+  <tr>
+    <th class = 'white-bg'></th>
+    <th>Apple Iphone Xs</th>
+    <th>Asus ZenPhone 3</th>
+    <th>OnePlus 6</th>
+    <th>Xiaomi MI9T</th>
+    <th>MyVector</th>
+    <th>PriorityVector</th>
+    <th>Lyambda</th>
+  </tr>
+  <tr>
+    <td  style = 'color:black; background-color: darkcyan' >Apple Iphone Xs</td>
+    <td class = 'results'>1</td>
+    <td><input type="number" [(ngModel)] = 'LenovoItoAcerA_SSD'></td>
+    <td><input type="number" [(ngModel)] = 'LenovoItoLenovoG_SSD'></td>
+    <td><input type="number" [(ngModel)] = 'LenovoItoAcerS_SSD'></td>
+    <td class = 'results'>{{MySSDCriteriesVectorLenovoI}}</td>
+    <td class = 'results'>{{SSDPriorityCriteriesVectorLenovoI}}</td>
+    <td class = 'results'>{{SSDPriorityCriteriesLyambdaLenovoI}}</td>
+  </tr>
+  <tr>
+    <td  style = 'color:black; background-color: darkcyan'>Asus ZenPhone 3</td>
+    <td><input type="number" [(ngModel)] = 'AcerAtoLenovoI_SSD'></td>
+    <td class = 'results'>1</td>
+    <td><input type="number" [(ngModel)] = 'AcerAtoLenovoG_SSD'></td>
+    <td><input type="number" [(ngModel)] = 'AcerAtoAcerS_SSD'></td>
+    <td class = 'results'>{{MySSDCriteriesVectorAcerA}}</td>
+    <td class = 'results'>{{SSDPrioritCriteriesVectorAcerA}}</td>
+    <td class = 'results'>{{SSDPrioritCriteriesLyambdAcerA}}</td>
+  </tr>
+  <tr>
+    <td style = 'color:black; background-color: darkcyan'>OnePlus 6</td>
+    <td><input type="number" [(ngModel)] = 'LenovoGtoLenovoI_SSD'></td>
+    <td><input type="number" [(ngModel)] = 'LenovoGtoAcerA_SSD'></td>
+    <td class = 'results'>1</td>
+    <td><input type="number" [(ngModel)] = 'LenovoGtoAcerS_SSD'></td>
+    <td class = 'results'>{{MySSDCriteriesVectorLenovoG}}</td>
+    <td class = 'results'>{{SSDPrioritCriteriesVectorLenovoG}}</td>
+    <td class = 'results'>{{SSDPrioritCriteriesLyambdLenovoG}}</td>
+  </tr>
+  <tr>
+    <td style = 'color:black; background-color: darkcyan'>Xiaomi MI9T</td>
+    <td><input type="number" [(ngModel)] = 'AcerStoLenovoI_SSD'></td>
+    <td><input type="number" [(ngModel)] = 'AcerStoAcerA_SSD'></td>
+    <td><input type="number" [(ngModel)] = 'AcerStoLenovoG_SSD'></td>
+    <td class = 'results'>1</td>
+    <td class = 'results'>{{MySSDCriteriesVectorAcerS}}</td>
+    <td class = 'results'>{{SSDPrioritCriteriesVectorAcerS}}</td>
+    <td class = 'results'>{{SSDPrioritCriteriesLyambdAcerS}}</td>
+  </tr>
+  <tr>
+    <td style = 'color:black; background-color: darkcyan'>Sum</td>
+    <td class = 'results'>{{LenovoICriteriesSSDSum}}</td>
+    <td class = 'results'>{{AcerACriteriesSSDSum}}</td>
+    <td class = 'results'>{{LenovoGCriteriesSSDSum}}</td>
+    <td class = 'results'>{{AcerSCriteriesSSDSum}}</td>
+    <td class = 'results'>{{MySSDVectorCriteriesSum}}</td>
+    <td class = 'results'>{{SSDPrioritVectorCriteriesSum+0.0000000000000001}}</td>
+    <td class = 'results'>{{SSDPrioritLyambdCriteriesSum}}</td>
+  </tr>
+</table>
+<h5>ІУ - {{((SSDPrioritLyambdCriteriesSum-4)/3) * 10}}%</h5>
+              <h5>ВУ - {{(((SSDPrioritLyambdCriteriesSum-4)/3) / 0.9)*10}}%</h5>
+
+
+<!--//////////////////////////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////-->
+
+<h1>GPU</h1>
+<table id='gpu'>
+  <tr>
+    <th class = 'white-bg'></th>
+    <th>Apple Iphone Xs</th>
+    <th>Asus ZenPhone 3</th>
+    <th>OnePlus 6</th>
+    <th>Xiaomi MI9T</th>
+    <th>MyVector</th>
+    <th>PriorityVector</th>
+    <th>Lyambda</th>
+  </tr>
+  <tr>
+    <td  style = 'color:black; background-color: darkcyan' >Apple Iphone Xs</td>
+    <td class = 'results'>1</td>
+    <td><input type="number" [(ngModel)] = 'LenovoItoAcerA_GPU'></td>
+    <td><input type="number" [(ngModel)] = 'LenovoItoLenovoG_GPU'></td>
+    <td><input type="number" [(ngModel)] = 'LenovoItoAcerS_GPU'></td>
+    <td class = 'results'>{{MyGPUCriteriesVectorLenovoI}}</td>
+    <td class = 'results'>{{GPUPriorityCriteriesVectorLenovoI}}</td>
+    <td class = 'results'>{{GPUPriorityCriteriesLyambdaLenovoI}}</td>
+  </tr>
+  <tr>
+    <td  style = 'color:black; background-color: darkcyan'>Asus ZenPhone 3</td>
+    <td><input type="number" [(ngModel)] = 'AcerAtoLenovoI_GPU'></td>
+    <td class = 'results'>1</td>
+    <td><input type="number" [(ngModel)] = 'AcerAtoLenovoG_GPU'></td>
+    <td><input type="number" [(ngModel)] = 'AcerAtoAcerS_GPU'></td>
+    <td class = 'results'>{{MyGPUCriteriesVectorAcerA}}</td>
+    <td class = 'results'>{{GPUPrioritCriteriesVectorAcerA}}</td>
+    <td class = 'results'>{{GPUPrioritCriteriesLyambdAcerA}}</td>
+  </tr>
+  <tr>
+    <td style = 'color:black; background-color: darkcyan'>OnePlus 6</td>
+    <td><input type="number" [(ngModel)] = 'LenovoGtoLenovoI_GPU'></td>
+    <td><input type="number" [(ngModel)] = 'LenovoGtoAcerA_GPU'></td>
+    <td class = 'results'>1</td>
+    <td><input type="number" [(ngModel)] = 'LenovoGtoAcerS_GPU'></td>
+    <td class = 'results'>{{MyGPUCriteriesVectorLenovoG}}</td>
+    <td class = 'results'>{{GPUPrioritCriteriesVectorLenovoG}}</td>
+    <td class = 'results'>{{GPUPrioritCriteriesLyambdLenovoG}}</td>
+  </tr>
+  <tr>
+    <td style = 'color:black; background-color: darkcyan'>Xiaomi MI9T</td>
+    <td><input type="number" [(ngModel)] = 'AcerStoLenovoI_GPU'></td>
+    <td><input type="number" [(ngModel)] = 'AcerStoAcerA_GPU'></td>
+    <td><input type="number" [(ngModel)] = 'AcerStoLenovoG_GPU'></td>
+    <td class = 'results'>1</td>
+    <td class = 'results'>{{MyGPUCriteriesVectorAcerS}}</td>
+    <td class = 'results'>{{GPUPrioritCriteriesVectorAcerS}}</td>
+    <td class = 'results'>{{GPUPrioritCriteriesLyambdAcerS}}</td>
+  </tr>
+  <tr>
+    <td style = 'color:black; background-color: darkcyan'>Sum</td>
+    <td class = 'results'>{{LenovoICriteriesGPUSum}}</td>
+    <td class = 'results'>{{AcerACriteriesGPUSum}}</td>
+    <td class = 'results'>{{LenovoGCriteriesGPUSum}}</td>
+    <td class = 'results'>{{AcerSCriteriesGPUSum}}</td>
+    <td class = 'results'>{{MyGPUVectorCriteriesSum}}</td>
+    <td class = 'results'>{{GPUPrioritVectorCriteriesSum+0.0000000000000001}}</td>
+    <td class = 'results'>{{GPUPrioritLyambdCriteriesSum}}</td>
+  </tr>
+</table>
+<h5>ІУ - {{((GPUPrioritLyambdCriteriesSum-4)/3) * 10}}%</h5>
+              <h5>ВУ - {{(((GPUPrioritLyambdCriteriesSum-4)/3) / 0.9)*10}}%</h5>
+
+<!--//////////////////////////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////-->
+
+<h1>Battery</h1>
+<table id='battery'>
+  <tr>
+    <th class = 'white-bg'></th>
+    <th>Apple Iphone Xs</th>
+    <th>Asus ZenPhone 3</th>
+    <th>OnePlus 6</th>
+    <th>Xiaomi MI9T</th>
+    <th>MyVector</th>
+    <th>PriorityVector</th>
+    <th>Lyambda</th>
+  </tr>
+  <tr>
+    <td  style = 'color:black; background-color: darkcyan' >Apple Iphone Xs</td>
+    <td class = 'results'>1</td>
+    <td><input type="number" [(ngModel)] = 'LenovoItoAcerA_Battery'></td>
+    <td><input type="number" [(ngModel)] = 'LenovoItoLenovoG_Battery'></td>
+    <td><input type="number" [(ngModel)] = 'LenovoItoAcerS_Battery'></td>
+    <td class = 'results'>{{MyBatteryCriteriesVectorLenovoI}}</td>
+    <td class = 'results'>{{BatteryPriorityCriteriesVectorLenovoI}}</td>
+    <td class = 'results'>{{BatteryPriorityCriteriesLyambdaLenovoI}}</td>
+  </tr>
+  <tr>
+    <td  style = 'color:black; background-color: darkcyan'>Asus ZenPhone 3</td>
+    <td><input type="number" [(ngModel)] = 'AcerAtoLenovoI_Battery'></td>
+    <td class = 'results'>1</td>
+    <td><input type="number" [(ngModel)] = 'AcerAtoLenovoG_Battery'></td>
+    <td><input type="number" [(ngModel)] = 'AcerAtoAcerS_Battery'></td>
+    <td class = 'results'>{{MyBatteryCriteriesVectorAcerA}}</td>
+    <td class = 'results'>{{BatteryPrioritCriteriesVectorAcerA}}</td>
+    <td class = 'results'>{{BatteryPrioritCriteriesLyambdAcerA}}</td>
+  </tr>
+  <tr>
+    <td style = 'color:black; background-color: darkcyan'>OnePlus 6</td>
+    <td><input type="number" [(ngModel)] = 'LenovoGtoLenovoI_Battery'></td>
+    <td><input type="number" [(ngModel)] = 'LenovoGtoAcerA_Battery'></td>
+    <td class = 'results'>1</td>
+    <td><input type="number" [(ngModel)] = 'LenovoGtoAcerS_Battery'></td>
+    <td class = 'results'>{{MyBatteryCriteriesVectorLenovoG}}</td>
+    <td class = 'results'>{{BatteryPrioritCriteriesVectorLenovoG}}</td>
+    <td class = 'results'>{{BatteryPrioritCriteriesLyambdLenovoG}}</td>
+  </tr>
+  <tr>
+    <td style = 'color:black; background-color: darkcyan'>Xiaomi MI9T</td>
+    <td><input type="number" [(ngModel)] = 'AcerStoLenovoI_Battery'></td>
+    <td><input type="number" [(ngModel)] = 'AcerStoAcerA_Battery'></td>
+    <td><input type="number" [(ngModel)] = 'AcerStoLenovoG_Battery'></td>
+    <td class = 'results'>1</td>
+    <td class = 'results'>{{MyBatteryCriteriesVectorAcerS}}</td>
+    <td class = 'results'>{{BatteryPrioritCriteriesVectorAcerS}}</td>
+    <td class = 'results'>{{BatteryPrioritCriteriesLyambdAcerS}}</td>
+  </tr>
+  <tr>
+    <td style = 'color:black; background-color: darkcyan'>Sum</td>
+    <td class = 'results'>{{LenovoICriteriesBatterySum}}</td>
+    <td class = 'results'>{{AcerACriteriesBatterySum}}</td>
+    <td class = 'results'>{{LenovoGCriteriesBatterySum}}</td>
+    <td class = 'results'>{{AcerSCriteriesBatterySum}}</td>
+    <td class = 'results'>{{MyBatteryVectorCriteriesSum}}</td>
+    <td class = 'results'>{{BatteryPrioritVectorCriteriesSum+0.0000000000000001}}</td>
+    <td class = 'results'>{{BatteryPrioritLyambdCriteriesSum}}</td>
+  </tr>
+</table>
+<h5>ІУ - {{((BatteryPrioritLyambdCriteriesSum-4)/3) * 10}}%</h5>
+              <h5>ВУ - {{(((BatteryPrioritLyambdCriteriesSum-4)/3) / 0.9)*10}}%</h5>
+
+      </div>
+
+
+<div class="answer">
+    <table id='table'>
+      <tr>
+        <td style = 'color:black; background-color: darkcyan'>Apple Iphone Xs</td>
+        <td>0,352294827
+        </td>
+      </tr>
+      <tr>
+        <td style = 'color:black; background-color: darkcyan'>Asus ZenPhone 3</td>
+        <td style='background-color: red'>0,499377345
+        </td>
+      </tr>
+      <tr>
+        <td style = 'color:black; background-color: darkcyan'>OnePlus 6</td>
+        <td>0,342007062
+        </td>
+      </tr>
+         <tr>
+        <td style = 'color:black; background-color: darkcyan'>Xiaomi MI9T</td>
+        <td>0,334020245
+        </td>
+      </tr>
+    </table>
+</div>
